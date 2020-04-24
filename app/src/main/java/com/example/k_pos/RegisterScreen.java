@@ -6,13 +6,13 @@ import android.os.Bundle;
 
 import java.util.Objects;
 
-public class LoginScreen extends AppCompatActivity {
+public class RegisterScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_screen);
+        setContentView(R.layout.activity_register_screen);
 
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Login");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Register");
     }
 }

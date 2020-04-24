@@ -22,7 +22,7 @@
             android:id="@+id/AppLogo"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:background="@color/AppWhiteColor"
+            android:background="@drawable/logokpos"
             android:layout_centerInParent="true"
             />
         <TextView

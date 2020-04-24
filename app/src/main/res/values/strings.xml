@@ -9,4 +9,12 @@
     <string name="register">Register</string>
     <string name="textForgetPassword">Forget Password?</string>
     <string name="textDontHaveAccount">don\'t have account?</string>
+    <string name="textFirstName">First Name</string>
+    <string name="hintFirstName">Nur Ardia</string>
+    <string name="textLastName">Last Name</string>
+    <string name="hintLastName">Rahmawati</string>
+    <string name="textEmail">Email</string>
+    <string name="textPhoneNumber">Phone Number</string>
+    <string name="hintPhoneNumber">082218193407</string>
+    <string name="textConfirmPassword">Confirm Password</string>
 </resources>
