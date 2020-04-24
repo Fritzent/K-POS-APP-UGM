@@ -7,4 +7,6 @@
     <string name="hintPassword">a1ncZs.GG</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="textForgetPassword">Forget Password?</string>
+    <string name="textDontHaveAccount">don\'t have account?</string>
 </resources>

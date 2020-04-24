@@ -13,6 +13,6 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Login");
+        getSupportActionBar().setTitle("Login");
     }
 }

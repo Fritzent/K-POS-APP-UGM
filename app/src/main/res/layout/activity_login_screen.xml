@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AppWhiteColor"
     android:layout_marginStart="20dp"
     android:layout_marginEnd="20dp"
+    android:background="@color/AppWhiteColor"
     tools:context=".LoginScreen">
 
     <TextView
@@ -73,19 +73,72 @@
 
     <Button
         android:id="@+id/btnLogin"
+        style="?attr/borderlessButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:layout_constraintTop_toBottomOf="@id/inputPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="42dp"
-        android:text="@string/login"
-        android:textSize="16sp"
-        android:fontFamily="@font/sspsemibold"
         android:background="@drawable/selector_btn"
-        style="?attr/borderlessButtonStyle"
+        android:fontFamily="@font/sspsemibold"
+        android:text="@string/login"
         android:textColor="@color/AppWhiteColor"
-        />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPassword" />
 
+    <TextView
+        android:id="@+id/txtForgetPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/sspreguler"
+        android:text="@string/textForgetPassword"
+        android:textColor="@color/AppLightBluefontColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    <View
+        android:id="@+id/inlineLogin"
+        android:layout_width="43dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="42dp"
+        android:background="@color/AppLightBluefontColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtForgetPass" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inlineLogin">
+
+        <TextView
+            android:id="@+id/txtDummy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sspreguler"
+            android:text="@string/textDontHaveAccount"
+            android:textColor="@color/AppLightBluefontColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/sspreguler"
+            android:text="@string/register"
+            android:textAllCaps="true"
+            android:textColor="@color/AppBackgroundColor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
