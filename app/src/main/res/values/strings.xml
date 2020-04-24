@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">K-POS</string>
     <string name="AppNames">K-POS</string>
+    <string name="inputEmail">Mobile number or email</string>
+    <string name="hintEmail">kpos@mail.ugm.ac.id</string>
+    <string name="inputPassword">Password</string>
+    <string name="hintPassword">a1ncZs.GG</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
 </resources>

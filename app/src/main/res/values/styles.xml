@@ -9,11 +9,12 @@
     </style>
 
 <!--    this is custome theme-->
-    <style name="CustomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorAccent">@color/AppBackgroundColor</item>
+    <style name="CustomeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/AppfontColor</item>
+        <item name="colorPrimary">@color/AppBackgroundColor</item>
 
 <!--        ini untuk ngatur bar atas-->
-        <item name="colorPrimaryDark">@color/AppBackgroundColor</item>
+        <item name="colorPrimaryDark">@color/AppBackgroundColorDark</item>
     </style>
 
 </resources>
