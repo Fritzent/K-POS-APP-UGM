@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/AppBackgroundColor</item>
+        <item name="colorPrimaryDark">@color/AppWhiteColor</item>
+        <item name="colorAccent">@color/AppBackgroundColor</item>
+    </style>
+
+<!--    this is custome theme-->
+    <style name="CustomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/AppBackgroundColor</item>
+
+<!--        ini untuk ngatur bar atas-->
+        <item name="colorPrimaryDark">@color/AppBackgroundColor</item>
+    </style>
+
+</resources>
