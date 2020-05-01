@@ -35,4 +35,8 @@
     <string name="menuOpenStore">Open Store</string>
     <string name="menuManageProduct">Manage Product</string>
     <string name="menuOnlineOrder">Online Order</string>
+    <string name="menuOfflineOrder">Start Offline Order</string>
+    <string name="menuHistory">History</string>
+    <string name="menuReport">Report</string>
+    <string name="menuSetting">Setting</string>
 </resources>
