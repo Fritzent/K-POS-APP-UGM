@@ -17,4 +17,17 @@
     <string name="textPhoneNumber">Phone Number</string>
     <string name="hintPhoneNumber">082218193407</string>
     <string name="textConfirmPassword">Confirm Password</string>
+    <string name="textAlreadyHaveAccount">already have account?</string>
+    <string name="store_name">Store Name</string>
+    <string name="hintStoreName">Nur Ardia Store</string>
+    <string name="txtStorePhoneNumber">Store Phone Number</string>
+    <string name="txtCity">City</string>
+    <string name="hintCity">Yogyakarta</string>
+    <string name="txtAddress">Address</string>
+    <string name="hintAddress">Blimbingsari CT IV No 44 Yogyakarta</string>
+    <string name="txtNext">Next</string>
+    <string name="textSuccess">Register Success!</string>
+    <string name="txtAlertSuccess">Check your email register for the complete information</string>
+    <string name="txtBalance">120.000</string>
+    <string name="txtActionBarName">K-POS PENJUAL</string>
 </resources>

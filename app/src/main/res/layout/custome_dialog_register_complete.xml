@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@drawable/custome_alert_dialog_white_solid_bg"
+            >
+
+            <ImageView
+                android:id="@+id/successLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/iconsuccess"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:id="@+id/textAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textSuccess"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:fontFamily="@font/sspsemibold"
+                android:textColor="@color/AppfontColor"
+                android:layout_below="@id/successLogo"
+                />
+            <TextView
+                android:id="@+id/textAlertInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtAlertSuccess"
+                android:layout_below="@id/textAlert"
+                android:textSize="16sp"
+                android:fontFamily="@font/sspreguler"
+                android:textColor="@color/AppgrayfontColor"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginTop="9dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
