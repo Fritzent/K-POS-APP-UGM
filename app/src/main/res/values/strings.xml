@@ -31,7 +31,7 @@
     <string name="txtBalance">120.000</string>
     <string name="txtActionBarName">K-POS PENJUAL</string>
 
-<!--    this is menu string-->
+    <!--    this is menu string-->
     <string name="menuOpenStore">Open Store</string>
     <string name="menuManageProduct">Manage Product</string>
     <string name="menuOnlineOrder">Online Order</string>
@@ -39,4 +39,9 @@
     <string name="menuHistory">History</string>
     <string name="menuReport">Report</string>
     <string name="menuSetting">Setting</string>
+    <string name="txtLocation">Choose Location</string>
+
+<!--    this si for choose yes or no-->
+    <string name="SelectYes">Yes</string>
+    <string name="SelectNo">No</string>
 </resources>
