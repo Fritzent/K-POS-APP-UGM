@@ -30,4 +30,9 @@
     <string name="txtAlertSuccess">Check your email register for the complete information</string>
     <string name="txtBalance">120.000</string>
     <string name="txtActionBarName">K-POS PENJUAL</string>
+
+<!--    this is menu string-->
+    <string name="menuOpenStore">Open Store</string>
+    <string name="menuManageProduct">Manage Product</string>
+    <string name="menuOnlineOrder">Online Order</string>
 </resources>

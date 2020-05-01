@@ -13,6 +13,10 @@
     <color name="UnActiceSection">#B7B7B7</color>
     <color name="AppLightBluefontColor">#35405A</color>
 
+<!--    this is color for menu-->
+    <color name="AppOpenStoreMenu">#DCF0FF</color>
+    <color name="AppManageProductMenu">#E8E5F8</color>
+
 <!--    this is the opacity color-->
     <color name="shadowWhiteOpacity10">#0D767680</color>
 </resources>
