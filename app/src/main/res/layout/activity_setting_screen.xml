@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingScreen">
+
+    <RelativeLayout
+        android:id="@+id/CustomeActionBarSettingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="19dp"
+        android:paddingEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Back_Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_blue_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/sspbold"
+            android:text="@string/txtEditProfile"
+            android:textColor="@color/AppfontColor"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/UserProfileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingStart="15dp"
+        android:paddingTop="13dp"
+        android:paddingEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CustomeActionBarSettingScreen">
+
+        <RelativeLayout
+            android:id="@+id/UserDetails"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/UserStoreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sspbold"
+                    android:text="@string/hintStoreName"
+                    android:textColor="@color/AppfontColor"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/UserPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/UserStoreName"
+                    android:fontFamily="@font/sspsemibold"
+                    android:text="@string/hintPhoneNumber"
+                    android:textColor="@color/AppfontColor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/UserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/UserPhoneNumber"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sspreguler"
+                    android:text="@string/hintFirstName"
+                    android:textColor="@color/AppfontColor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:background="@color/AppBackgroundColor"
+            android:scaleType="fitXY"
+            android:src="@drawable/img" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/InlineOne"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/shadowWhiteOpacity5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/UserProfileLayout" />
+
+    <RelativeLayout
+        android:id="@+id/TaxAndDiscountSide"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingStart="18dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/InlineOne">
+
+        <LinearLayout
+            android:id="@+id/discountSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/arrow_right_icon"
+                android:fontFamily="@font/sspbold"
+                android:text="@string/txtManageDiscounts"
+                android:textColor="@color/AppfontColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/InlineTwo"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/discountSide"
+            android:layout_marginTop="14dp"
+            android:background="@color/shadowWhiteOpacity5" />
+
+        <LinearLayout
+            android:id="@+id/taxSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/InlineTwo"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/arrow_right_icon"
+                android:fontFamily="@font/sspbold"
+                android:text="@string/txtManageTax"
+                android:textColor="@color/AppfontColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/InlineThree"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/shadowWhiteOpacity5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TaxAndDiscountSide" />
+
+    <RelativeLayout
+        android:id="@+id/PrinterAndReceiptSide"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingStart="18dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/InlineThree">
+
+        <LinearLayout
+            android:id="@+id/printerSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/arrow_right_icon"
+                android:fontFamily="@font/sspbold"
+                android:text="@string/txtManagePrinter"
+                android:textColor="@color/AppfontColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/InlineFour"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/printerSide"
+            android:layout_marginTop="14dp"
+            android:background="@color/shadowWhiteOpacity5" />
+
+        <LinearLayout
+            android:id="@+id/receiptSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/InlineFour"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/arrow_right_icon"
+                android:fontFamily="@font/sspbold"
+                android:text="@string/txtManageReceipt"
+                android:textColor="@color/AppfontColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/InlineFive"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/shadowWhiteOpacity5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PrinterAndReceiptSide" />
+
+    <RelativeLayout
+        android:id="@+id/NextAndExitSide"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingStart="18dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/InlineFive">
+
+        <LinearLayout
+            android:id="@+id/nextSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/arrow_right_icon"
+                android:fontFamily="@font/sspbold"
+                android:text="@string/txtAdvanced"
+                android:textColor="@color/AppfontColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/InlineSix"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/nextSide"
+            android:layout_marginTop="14dp"
+            android:background="@color/shadowWhiteOpacity5" />
+
+        <LinearLayout
+            android:id="@+id/exitSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/InlineSix"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sspbold"
+                android:text="@string/txtExit"
+                android:textColor="@color/AppRedColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/InlineSeven"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/shadowWhiteOpacity5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NextAndExitSide" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

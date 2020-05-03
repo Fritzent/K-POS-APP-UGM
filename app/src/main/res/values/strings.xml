@@ -30,6 +30,7 @@
     <string name="txtAlertSuccess">Check your email register for the complete information</string>
     <string name="txtBalance">120.000</string>
     <string name="txtActionBarName">K-POS PENJUAL</string>
+    <string name="txtAdvanced">Advanced Setting</string>
 
     <!--    this is menu string-->
     <string name="menuOpenStore">Open Store</string>
@@ -41,7 +42,14 @@
     <string name="menuSetting">Setting</string>
     <string name="txtLocation">Choose Location</string>
 
-<!--    this si for choose yes or no-->
+    <!--    this si for choose yes or no-->
     <string name="SelectYes">Yes</string>
     <string name="SelectNo">No</string>
+    <string name="txtEditProfile">Edit Profile</string>
+    <string name="txtManageDiscounts">Manage Discounts</string>
+    <string name="txtManageTax">Manage Tax</string>
+    <string name="txtManagePrinter">Manage Printer</string>
+    <string name="txtManageReceipt">Manage Receipt</string>
+    <string name="txtExit">Exit</string>
+
 </resources>
