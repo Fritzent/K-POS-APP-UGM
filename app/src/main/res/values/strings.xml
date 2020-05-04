@@ -54,7 +54,7 @@
     <string name="SelectYes">Yes</string>
     <string name="SelectNo">No</string>
 
-<!--    this is dummy string-->
+    <!--    this is dummy string-->
     <string name="txtDummy">
         Terima kasih telah membeli produk kami.\n
         semoga kamu menikmatinya.\n
@@ -67,7 +67,11 @@
         silakan kirim pesan kepada kami untuk\n
         memberi tahu bagaimana kami selanjutnya.
     </string>
-
+    <string name="txtHelpMenu">Help</string>
+    <string name="txtAbout">About K-POS</string>
+    <string name="txtDeleteAccount">Delete sccount</string>
+    <string name="txtEditStoreProfile">Edit store srofile</string>
+    <string name="txtVersionApp">Version 1.0.0</string>
 
 
 </resources>

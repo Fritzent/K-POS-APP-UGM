@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManageReceiptScreen" android:theme="@style/CustomeTheme">
+        <activity android:name=".AdvancedSettingScreen" android:theme="@style/CustomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,8 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingScreen"
+            android:name=".ManageReceiptScreen"
             android:theme="@style/CustomeTheme"/>
+        <activity
+            android:name=".SettingScreen"
+            android:theme="@style/CustomeTheme" />
         <activity android:name=".OpenStoreScreen" />
         <activity
             android:name=".FormProfileStoreScreen"
