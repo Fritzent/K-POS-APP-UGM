@@ -32,6 +32,16 @@
     <string name="txtActionBarName">K-POS PENJUAL</string>
     <string name="txtAdvanced">Advanced Setting</string>
     <string name="txtInfoInNote">Information in note</string>
+    <string name="txtHelpMenu">Help</string>
+    <string name="txtAbout">About K-POS</string>
+    <string name="txtDeleteAccount">Delete sccount</string>
+    <string name="txtEditStoreProfile">Edit store srofile</string>
+    <string name="txtVersionApp">Version 1.0.0</string>
+    <string name="txtDiscountNominal">Discount Nominal (Rp)</string>
+    <string name="hintDiscountNominal">Example : 3</string>
+    <string name="txtMaximumPrice">Maximum Price (Rp)</string>
+    <string name="txtDiscountTitle">Discount Title</string>
+    <string name="hintDiscountTitle">Example : Discount New Year</string>
 
     <!--    this is menu string-->
     <string name="menuOpenStore">Open Store</string>
@@ -67,11 +77,7 @@
         silakan kirim pesan kepada kami untuk\n
         memberi tahu bagaimana kami selanjutnya.
     </string>
-    <string name="txtHelpMenu">Help</string>
-    <string name="txtAbout">About K-POS</string>
-    <string name="txtDeleteAccount">Delete sccount</string>
-    <string name="txtEditStoreProfile">Edit store srofile</string>
-    <string name="txtVersionApp">Version 1.0.0</string>
+    <string name="txtDiscountList">Discount List</string>
 
 
 </resources>

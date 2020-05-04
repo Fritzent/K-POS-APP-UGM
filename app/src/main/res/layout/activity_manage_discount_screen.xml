@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageDiscountScreen">
+
+    <RelativeLayout
+        android:id="@+id/CustomeActionBarManageDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/AppBackgroundColor"
+        android:paddingStart="19dp"
+        android:paddingEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sspbold"
+            android:text="@string/txtManageDiscounts"
+            android:textColor="@color/AppWhiteColor"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/discountAddTextButton"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="16dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CustomeActionBarManageDiscount">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/sspreguler"
+            android:text="Add new discount?"
+            android:textColor="@color/AppfontColor"
+            android:textSize="16dp" />
+
+        <Switch
+            android:id="@+id/btn_switch_add_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/formAddNewDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/discountAddTextButton"
+
+        >
+
+        <TextView
+            android:id="@+id/txtDiscountNomin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sspreguler"
+            android:text="@string/txtDiscountNominal"
+            android:textColor="@color/AppfontColor"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/discountNominal"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@id/txtDiscountNomin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_menu"
+            android:hint="@string/hintDiscountNominal"
+            android:inputType="number"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp" />
+
+        <TextView
+            android:id="@+id/txtDiscountMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discountNominal"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/sspreguler"
+            android:text="@string/txtMaximumPrice"
+            android:textColor="@color/AppfontColor"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/discountMax"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@id/txtDiscountMax"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_menu"
+            android:hint="@string/hintDiscountNominal"
+            android:inputType="number"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp" />
+
+        <TextView
+            android:id="@+id/txtDiscountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discountMax"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/sspreguler"
+            android:text="@string/txtDiscountTitle"
+            android:textColor="@color/AppfontColor"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/discountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@id/txtDiscountTitle"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_menu"
+            android:hint="@string/hintDiscountTitle"
+            android:inputType="text"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/InlineDiscountManage"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/formAddNewDiscount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/shadowWhiteOpacity5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtDiscountList"
+        app:layout_constraintTop_toBottomOf="@id/InlineDiscountManage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="14dp"
+        android:paddingEnd="19dp"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/sspsemibold"
+        android:textColor="@color/AppfontColor"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
