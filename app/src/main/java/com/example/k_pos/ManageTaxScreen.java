@@ -8,25 +8,24 @@ import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 
-public class ManageDiscountScreen extends AppCompatActivity {
+public class ManageTaxScreen extends AppCompatActivity {
 
     RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_discount_screen);
+        setContentView(R.layout.activity_manage_tax_screen);
 
         getSupportActionBar().hide();
 
-        //this is for the relative layout form
-        relativeLayout = findViewById(R.id.formAddNewDiscount);
+        //this is for the relative layout set to hide default
+        relativeLayout = findViewById(R.id.formAddNewTax);
         relativeLayout.setVisibility(View.INVISIBLE);
 
         //this is for the switch button action
-        Switch btn_switch = findViewById(R.id.btn_switch_add_discount);
-
-        btn_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        Switch btn_switch_tax = findViewById(R.id.btn_switch_add_tax);
+        btn_switch_tax.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
@@ -36,6 +35,5 @@ public class ManageDiscountScreen extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

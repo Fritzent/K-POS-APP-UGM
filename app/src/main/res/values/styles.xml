@@ -10,13 +10,14 @@
 
 <!--    this is custome theme-->
     <style name="CustomeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorAccent">@color/AppfontColor</item>
+        <item name="colorAccent">@color/AppBackgroundColor</item>
         <item name="colorPrimary">@color/AppBackgroundColor</item>
 
 <!--        ini untuk ngatur bar atas-->
         <item name="colorPrimaryDark">@color/AppBackgroundColorDark</item>
     </style>
 
+<!--    this style for the animation of pop register complete-->
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_up</item>
         <item name="android:windowExitAnimation">@anim/slide_bottom</item>

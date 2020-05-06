@@ -78,6 +78,12 @@
         memberi tahu bagaimana kami selanjutnya.
     </string>
     <string name="txtDiscountList">Discount List</string>
+    <string name="txtAddNewDiscount">Add new discount?</string>
+    <string name="txtAddNewTax">Add new tax?</string>
+    <string name="txtTaxNominal">Tax Nominal (Rp)</string>
+    <string name="txtTaxTitle">Tax Title</string>
+    <string name="hintTaxTitle">Example : Food Tax</string>
+    <string name="txtTaxList">Tax List</string>
 
 
 </resources>
