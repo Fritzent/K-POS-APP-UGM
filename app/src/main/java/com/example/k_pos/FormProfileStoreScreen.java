@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActionBar;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class FormProfileStoreScreen extends AppCompatActivity {
 
@@ -56,5 +60,16 @@ public class FormProfileStoreScreen extends AppCompatActivity {
         dialog.setCancelable(true);
         window.setLayout(ActionBar.LayoutParams.WRAP_CONTENT,ActionBar.LayoutParams.WRAP_CONTENT);
         dialog.show();
+
+        final Timer limitTimeShow = new Timer();
+        limitTimeShow.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+                limitTimeShow.cancel();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finish();
+            }
+        },4000); // after 4 second the show dialog close auto
     }
 }

@@ -8,6 +8,14 @@
         <item name="colorAccent">@color/AppBackgroundColor</item>
     </style>
 
+    <!-- Base application theme. -->
+    <style name="CustomeThemeNoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/AppBackgroundColor</item>
+        <item name="colorPrimaryDark">@color/AppBackgroundColorDark</item>
+        <item name="colorAccent">@color/AppBackgroundColor</item>
+    </style>
+
 <!--    this is custome theme-->
     <style name="CustomeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/AppBackgroundColor</item>

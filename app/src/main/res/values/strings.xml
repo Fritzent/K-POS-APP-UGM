@@ -34,8 +34,8 @@
     <string name="txtInfoInNote">Information in note</string>
     <string name="txtHelpMenu">Help</string>
     <string name="txtAbout">About K-POS</string>
-    <string name="txtDeleteAccount">Delete sccount</string>
-    <string name="txtEditStoreProfile">Edit store srofile</string>
+    <string name="txtDeleteAccount">Delete account</string>
+    <string name="txtEditStoreProfile">Edit store profile</string>
     <string name="txtVersionApp">Version 1.0.0</string>
     <string name="txtDiscountNominal">Discount Nominal (Rp)</string>
     <string name="hintDiscountNominal">Example : 3</string>

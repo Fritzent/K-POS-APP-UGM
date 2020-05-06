@@ -9,19 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditProfileScreen" android:theme="@style/CustomeTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".EditProfileStoreScreen" android:theme="@style/CustomeTheme"/>
+        <activity
+            android:name=".EditProfileScreen"
+            android:theme="@style/CustomeTheme"/>
         <activity
             android:name=".ManageTaxScreen"
             android:theme="@style/CustomeTheme" />
         <activity
             android:name=".ManageDiscountScreen"
-            android:theme="@style/CustomeTheme"/>
+            android:theme="@style/CustomeTheme" />
         <activity
             android:name=".AdvancedSettingScreen"
             android:theme="@style/CustomeTheme" />
@@ -42,7 +39,13 @@
             android:name=".LoginScreen"
             android:theme="@style/CustomeTheme" />
         <activity android:name=".OnBoardingScreen" />
-        <activity android:name=".SplashScreen" />
+        <activity android:name=".SplashScreen" android:theme="@style/CustomeThemeNoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/CustomeTheme" />

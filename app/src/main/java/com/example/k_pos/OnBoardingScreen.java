@@ -33,6 +33,7 @@ public class OnBoardingScreen extends AppCompatActivity {
 
         setupOnBoardingItems();
 
+        //this is setup ViewPager2
         final ViewPager2 onBoardingViewPager = findViewById(R.id.onBoardingViewPager);
         onBoardingViewPager.setAdapter(onBoardingAdapter);
 
@@ -53,7 +54,7 @@ public class OnBoardingScreen extends AppCompatActivity {
                 if (onBoardingViewPager.getCurrentItem() + 1 < onBoardingAdapter.getItemCount()) {
                     onBoardingViewPager.setCurrentItem(onBoardingViewPager.getCurrentItem() + 1);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), LoginScreen.class));
                     finish();
                 }
             }
