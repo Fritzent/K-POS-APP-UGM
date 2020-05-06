@@ -67,14 +67,12 @@
     <RelativeLayout
         android:id="@+id/formAddNewTax"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:paddingStart="14dp"
         android:paddingEnd="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/taxAddTextButton"
-
-        >
+        app:layout_constraintTop_toBottomOf="@id/taxAddTextButton">
 
         <TextView
             android:id="@+id/txtTaxNomin"
