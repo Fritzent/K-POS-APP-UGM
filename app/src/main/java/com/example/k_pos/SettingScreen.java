@@ -8,10 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class SettingScreen extends AppCompatActivity {
 
     LinearLayout managereceiptMenu, advancedsettingMenu, managediscountMenu, managetaxMenu, exitMenu;
+    TextView txtEditProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,16 @@ public class SettingScreen extends AppCompatActivity {
         managetaxMenu = findViewById(R.id.taxSide);
         advancedsettingMenu = findViewById(R.id.nextSide);
         exitMenu = findViewById(R.id.exitSide);
+        txtEditProfile = findViewById(R.id.txtEditProfile);
+
+        //this is for the text edit profile click action
+        txtEditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), EditProfileScreen.class));
+                finish();
+            }
+        });
 
         //this is for the managediscount menu click action
         managediscountMenu.setOnClickListener(new View.OnClickListener() {

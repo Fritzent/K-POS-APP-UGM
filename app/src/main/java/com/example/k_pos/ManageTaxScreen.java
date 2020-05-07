@@ -2,6 +2,7 @@ package com.example.k_pos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,5 +48,12 @@ public class ManageTaxScreen extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    //this is for the back pressed on phone action
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SettingScreen.class));
+        finish();
     }
 }
