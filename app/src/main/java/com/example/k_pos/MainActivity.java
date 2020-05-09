@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout settingMenu;
+    LinearLayout settingMenu, openstoreMenu, historyMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,26 @@ public class MainActivity extends AppCompatActivity {
 
         //this is for the defenition item on xml to java
         settingMenu = findViewById(R.id.SettingMenu);
+        openstoreMenu = findViewById(R.id.OpenStoreMenu);
+        historyMenu = findViewById(R.id.HistoryMenu);
+
+        //this is for the open store menu click action
+        openstoreMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), OpenStoreScreen.class));
+                finish();
+            }
+        });
+
+        //this is for the history menu click action
+        historyMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), HistoryScreen.class));
+                finish();
+            }
+        });
 
         //this is for the setting menu click action
         settingMenu.setOnClickListener(new View.OnClickListener() {

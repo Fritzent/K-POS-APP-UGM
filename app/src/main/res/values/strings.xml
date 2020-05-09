@@ -84,6 +84,8 @@
     <string name="txtTaxTitle">Tax Title</string>
     <string name="hintTaxTitle">Example : Food Tax</string>
     <string name="txtTaxList">Tax List</string>
+    <string name="hintSearchTransaction">Search for transaction</string>
+    <string name="txtFilter">Filter</string>
 
 
 </resources>

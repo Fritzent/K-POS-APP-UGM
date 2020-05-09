@@ -10,6 +10,7 @@
     <color name="AppfontColor">#2B2B2B</color>
     <color name="AppWhiteColor">#FFFFFF</color>
     <color name="AppgrayfontColor">#9E9E9E</color>
+    <color name="AppGrayBackground">#F9F9F9</color>
     <color name="UnActiceSection">#B7B7B7</color>
     <color name="AppLightBluefontColor">#35405A</color>
     <color name="AppRedColor">#FF1D1D</color>
@@ -23,6 +24,7 @@
 
 <!--    this is the opacity color-->
     <color name="shadowWhiteOpacity5">#0D767680</color>
+    <color name="AppfontColor30">#4D2B2B2B</color>
 
 
 </resources>

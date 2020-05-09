@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class OpenStoreScreen extends AppCompatActivity {
+public class HistoryScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_store_screen);
+        setContentView(R.layout.activity_history_screen);
 
-        //this to hide the default actionbar from android studio
+        //this is for hide the default action bar from android studio
         getSupportActionBar().hide();
     }
 
