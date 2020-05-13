@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppWhiteColor"
+    tools:context=".ReportScreen">
+
+    <RelativeLayout
+        android:id="@+id/CustomeActionBarReportScreen"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/AppBackgroundColor"
+        android:paddingStart="19dp"
+        android:paddingEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sspbold"
+            android:text="@string/menuReport"
+            android:textColor="@color/AppWhiteColor"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@id/CustomeActionBarReportScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:text="@string/txtDummyReport"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:fontFamily="@font/sspbold"
+        android:textColor="@color/AppfontColor"
+        android:drawableStart="@drawable/arrow_left_icon"
+        android:drawableEnd="@drawable/arrow_right_icon"
+        android:paddingStart="19dp"
+        android:paddingEnd="19dp"
+        android:background="@drawable/custome_background_report_list_date"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

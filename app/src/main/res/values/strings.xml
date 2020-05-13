@@ -86,6 +86,7 @@
     <string name="txtTaxList">Tax List</string>
     <string name="hintSearchTransaction">Search for transaction</string>
     <string name="txtFilter">Filter</string>
+    <string name="txtDummyReport">Minggu ini, 12 Maret 2020</string>
 
 
 </resources>
