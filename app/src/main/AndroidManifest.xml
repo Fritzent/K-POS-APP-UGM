@@ -10,8 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ReportScreen"
+            android:name=".OnlineOrderScreen"
             android:theme="@style/CustomeTheme"/>
+        <activity
+            android:name=".ManageProductScreen"
+            android:theme="@style/CustomeTheme" />
+        <activity
+            android:name=".ReportScreen"
+            android:theme="@style/CustomeTheme" />
         <activity
             android:name=".HistoryScreen"
             android:theme="@style/CustomeTheme" />

@@ -8,6 +8,8 @@
     <color name="AppBackgroundColorDark">#1CC2B9</color>
     <color name="AppBackgroundMainMenu">#FCFCFC</color>
     <color name="AppfontColor">#2B2B2B</color>
+    <color name="AppfontGrayColorFull">#707070</color>
+    <color name="AppfontGrayColor50Full">#505050</color>
     <color name="AppWhiteColor">#FFFFFF</color>
     <color name="AppgrayfontColor">#9E9E9E</color>
     <color name="AppGrayBackground">#F9F9F9</color>

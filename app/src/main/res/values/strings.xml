@@ -63,6 +63,8 @@
     <!--    this si for choose yes or no-->
     <string name="SelectYes">Yes</string>
     <string name="SelectNo">No</string>
+    <string name="SelectAccept">Accept</string>
+    <string name="SelectCancel">Cancel</string>
 
     <!--    this is dummy string-->
     <string name="txtDummy">
@@ -87,6 +89,11 @@
     <string name="hintSearchTransaction">Search for transaction</string>
     <string name="txtFilter">Filter</string>
     <string name="txtDummyReport">Minggu ini, 12 Maret 2020</string>
+    <string name="txtSelectAll">Select All</string>
+    <string name="dummyName">Ningrum</string>
+    <string name="dummy_Time">14.00 WIB</string>
+    <string name="dummy_location_order">Meja 5, Kantin HY UGM</string>
+    <string name="text_rp">Rp</string>
 
 
 </resources>

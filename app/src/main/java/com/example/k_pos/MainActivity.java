@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout settingMenu, openstoreMenu, historyMenu, reportMenu;
+    LinearLayout settingMenu, openstoreMenu, historyMenu, reportMenu, manageproductMenu, onlineorderMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,32 @@ public class MainActivity extends AppCompatActivity {
         openstoreMenu = findViewById(R.id.OpenStoreMenu);
         historyMenu = findViewById(R.id.HistoryMenu);
         reportMenu = findViewById(R.id.ReportMenu);
+        manageproductMenu = findViewById(R.id.ManageProdukMenu);
+        onlineorderMenu = findViewById(R.id.OnlineOrderMenu);
 
         //this is for the open store menu click action
         openstoreMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), OpenStoreScreen.class));
+                finish();
+            }
+        });
+
+        //this is for the manage procut menu click action
+        manageproductMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ManageProductScreen.class));
+                finish();
+            }
+        });
+
+        //this is for the online order menu click action
+        onlineorderMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), OnlineOrderScreen.class));
                 finish();
             }
         });
