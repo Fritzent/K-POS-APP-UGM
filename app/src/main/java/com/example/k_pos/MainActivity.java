@@ -6,13 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout settingMenu, openstoreMenu, historyMenu, reportMenu, manageproductMenu, onlineorderMenu;
+    TextView userBalance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         reportMenu = findViewById(R.id.ReportMenu);
         manageproductMenu = findViewById(R.id.ManageProdukMenu);
         onlineorderMenu = findViewById(R.id.OnlineOrderMenu);
+        userBalance = findViewById(R.id.txtBalance);
+
+        //this is for get data from the intent LoginScreen
+        Intent intent = getIntent();
+        if(intent.getExtras() != null){
+            String balancePassed = intent.getStringExtra("data");
+            userBalance.setText(balancePassed);
+        }
 
         //this is for the open store menu click action
         openstoreMenu.setOnClickListener(new View.OnClickListener() {
