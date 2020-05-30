@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,7 @@ import com.example.k_pos.helper.ResponBody;
 import com.example.k_pos.helper.UtilsApi;
 
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -49,10 +51,21 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(TextUtils.isEmpty(inputEmail.getText().toString()) || TextUtils.isEmpty(inputPassword.getText().toString())){
-                    Toast.makeText(LoginScreen.this, "Email and Password Required", Toast.LENGTH_LONG).show();
+                if(TextUtils.isEmpty((inputEmail.getText().toString().trim())) && TextUtils.isEmpty(inputPassword.getText().toString().trim())){
+                    Toast.makeText(LoginScreen.this, "Email and Password is Empty", Toast.LENGTH_SHORT).show();
+                    inputEmail.requestFocus();
+                }
 
-                }else{
+                else if(TextUtils.isEmpty(inputEmail.getText().toString().trim())){
+                    inputEmail.setError("Email is Empty");
+//                    Toast.makeText(LoginScreen.this, "Email is Empty", Toast.LENGTH_SHORT).show();
+                    inputEmail.requestFocus();
+                }
+                else if(TextUtils.isEmpty(inputPassword.getText().toString().trim())){
+                    inputPassword.setError("Password is Empty");
+//                    Toast.makeText(LoginScreen.this, "Password is Empty", Toast.LENGTH_SHORT).show();
+                    inputPassword.requestFocus();
+                } else{
                     loginProceed();
                 }
 
@@ -82,7 +95,7 @@ public class LoginScreen extends AppCompatActivity {
         responBody.enqueue(new Callback<ResponBody>() {
             @Override
             public void onResponse(Call<ResponBody> call, Response<ResponBody> response) {
-                
+
                 if(response.isSuccessful()){
                     Toast.makeText(LoginScreen.this, "Login Success", Toast.LENGTH_SHORT).show();
                     ResponBody loginRespon = response.body();
@@ -96,7 +109,7 @@ public class LoginScreen extends AppCompatActivity {
                         }
                     }, 700);
 
-                }else{
+                } else{
                     Toast.makeText(LoginScreen.this, "Login Failed", Toast.LENGTH_SHORT).show();
                 }
             }

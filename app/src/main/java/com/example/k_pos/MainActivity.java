@@ -32,13 +32,12 @@ public class MainActivity extends AppCompatActivity {
         reportMenu = findViewById(R.id.ReportMenu);
         manageproductMenu = findViewById(R.id.ManageProdukMenu);
         onlineorderMenu = findViewById(R.id.OnlineOrderMenu);
-        userBalance = findViewById(R.id.txtBalance);
 
         //this is for get data from the intent LoginScreen
         Intent intent = getIntent();
         if(intent.getExtras() != null){
             String balancePassed = intent.getStringExtra("data");
-            userBalance.setText(balancePassed);
+//            userBalance.setText(balancePassed);
         }
 
         //this is for the open store menu click action
