@@ -1,4 +1,4 @@
-package com.example.k_pos;
+package com.example.k_pos.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import com.example.k_pos.R;
 
 public class AdvancedSettingScreen extends AppCompatActivity {
 

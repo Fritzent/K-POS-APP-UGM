@@ -1,4 +1,4 @@
-package com.example.k_pos;
+package com.example.k_pos.views;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.k_pos.R;
+import com.example.k_pos.models.User;
+import com.example.k_pos.storage.SharedPrefManage;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //this is for the inizalitation the sharedPreference
+        User user = SharedPrefManage.getInstance(this).getUser();
+
         //this is to hide the default actionBar
         getSupportActionBar().hide();
 
@@ -32,13 +38,9 @@ public class MainActivity extends AppCompatActivity {
         reportMenu = findViewById(R.id.ReportMenu);
         manageproductMenu = findViewById(R.id.ManageProdukMenu);
         onlineorderMenu = findViewById(R.id.OnlineOrderMenu);
+        userBalance = findViewById(R.id.txtSaldo);
 
-        //this is for get data from the intent LoginScreen
-        Intent intent = getIntent();
-        if(intent.getExtras() != null){
-            String balancePassed = intent.getStringExtra("data");
-//            userBalance.setText(balancePassed);
-        }
+       userBalance.setText(Integer.toString(user.getSaldo()));
 
         //this is for the open store menu click action
         openstoreMenu.setOnClickListener(new View.OnClickListener() {
@@ -89,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
         settingMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), SettingScreen.class));
-                finish();
+                startActivity(new Intent(getApplicationContext(),SettingScreen.class)
+                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
             }
         });
     }
@@ -108,5 +110,17 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.super.onBackPressed();
                     }
                 }).create().show();
+    }
+
+    //this is to check if the user not login yet
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(!SharedPrefManage.getInstance(this).isLoggedIn()){
+            Intent intent = new Intent(MainActivity.this, LoginScreen.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
     }
 }

@@ -1,18 +1,20 @@
-package com.example.k_pos;
+package com.example.k_pos.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-public class ManageProductScreen extends AppCompatActivity {
+import com.example.k_pos.R;
+
+public class OpenStoreScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_product_screen);
+        setContentView(R.layout.activity_open_store_screen);
 
-        //this is for hide the default actionbar from android studio
+        //this to hide the default actionbar from android studio
         getSupportActionBar().hide();
     }
 

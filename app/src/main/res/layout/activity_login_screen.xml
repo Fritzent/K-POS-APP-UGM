@@ -7,7 +7,7 @@
     android:layout_marginStart="20dp"
     android:layout_marginEnd="20dp"
     android:background="@color/AppWhiteColor"
-    tools:context=".LoginScreen">
+    tools:context=".views.LoginScreen">
 
     <TextView
         android:id="@+id/txtInputEmail"

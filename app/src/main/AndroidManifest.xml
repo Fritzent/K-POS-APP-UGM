@@ -12,53 +12,53 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".OnlineOrderScreen"
+            android:name=".views.OnlineOrderScreen"
             android:theme="@style/CustomeTheme"/>
         <activity
-            android:name=".ManageProductScreen"
+            android:name=".views.ManageProductScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".ReportScreen"
+            android:name=".views.ReportScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".HistoryScreen"
+            android:name=".views.HistoryScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".EditProfileStoreScreen"
+            android:name=".views.EditProfileStoreScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".EditProfileScreen"
+            android:name=".views.EditProfileScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".ManageTaxScreen"
+            android:name=".views.ManageTaxScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".ManageDiscountScreen"
+            android:name=".views.ManageDiscountScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".AdvancedSettingScreen"
+            android:name=".views.AdvancedSettingScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".ManageReceiptScreen"
+            android:name=".views.ManageReceiptScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".SettingScreen"
+            android:name=".views.SettingScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".OpenStoreScreen"
+            android:name=".views.OpenStoreScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".FormProfileStoreScreen"
+            android:name=".views.FormProfileStoreScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".RegisterScreen"
+            android:name=".views.RegisterScreen"
             android:theme="@style/CustomeTheme" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".views.LoginScreen"
             android:theme="@style/CustomeTheme" />
-        <activity android:name=".OnBoardingScreen" />
+        <activity android:name=".views.OnBoardingScreen" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".views.SplashScreen"
             android:theme="@style/CustomeThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,7 +67,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".views.MainActivity"
             android:theme="@style/CustomeTheme" />
     </application>
 

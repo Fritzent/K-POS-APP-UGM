@@ -1,4 +1,4 @@
-package com.example.k_pos;
+package com.example.k_pos.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.k_pos.R;
 
 public class SplashScreen extends AppCompatActivity {
 

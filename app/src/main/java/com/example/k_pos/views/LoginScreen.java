@@ -1,4 +1,4 @@
-package com.example.k_pos;
+package com.example.k_pos.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,19 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.k_pos.helper.ApiClient;
-import com.example.k_pos.helper.ResponBody;
-import com.example.k_pos.helper.UtilsApi;
+import com.example.k_pos.R;
+import com.example.k_pos.Api.ApiClient;
+import com.example.k_pos.models.LoginRespon;
+import com.example.k_pos.models.ResponBody;
+import com.example.k_pos.Api.UtilsApi;
+import com.example.k_pos.storage.SharedPrefManage;
 
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -85,41 +86,55 @@ public class LoginScreen extends AppCompatActivity {
         //this is for the text forget password click action
     }
 
+    //this is to check if the user already login
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(SharedPrefManage.getInstance(this).isLoggedIn()){
+            Intent intent = new Intent(LoginScreen.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+    }
+
+    //this is for the login method action
     public void loginProceed(){
         UtilsApi loginRequest = new UtilsApi();
         loginRequest.setEmail(inputEmail.getText().toString());
         loginRequest.setPassword(inputPassword.getText().toString());
 
 
-        Call<ResponBody> responBody = ApiClient.getApiService().userLogin(loginRequest);
-        responBody.enqueue(new Callback<ResponBody>() {
+        Call<LoginRespon> loginRespon = ApiClient.getApiService().userLogin(loginRequest);
+        loginRespon.enqueue(new Callback<LoginRespon>() {
             @Override
-            public void onResponse(Call<ResponBody> call, Response<ResponBody> response) {
-
+            public void onResponse(Call<LoginRespon> call, Response<LoginRespon> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(LoginScreen.this, "Login Success", Toast.LENGTH_SHORT).show();
-                    ResponBody loginRespon = response.body();
+                    LoginRespon loginRespondata = response.body();
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            ResponBody loginRespon = response.body();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class).putExtra("data", loginRespon.getSaldo()));
-                            finish();
-                        }
-                    }, 700);
+                    if(!loginRespondata.isError()){
 
-                } else{
+                        SharedPrefManage.getInstance(LoginScreen.this)
+                                .saveUser(loginRespondata.getUser());
+
+                        Intent intent = new Intent(LoginScreen.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+
+                    }else{
+                        Toast.makeText(LoginScreen.this, loginRespondata.getStatus(), Toast.LENGTH_SHORT).show();
+                    }
+
+                }else{
                     Toast.makeText(LoginScreen.this, "Login Failed", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<ResponBody> call, Throwable t) {
-                Toast.makeText(LoginScreen.this, "Throwable"+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<LoginRespon> call, Throwable t) {
+                Toast.makeText(LoginScreen.this, "Error"+ t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
-
     }
 }

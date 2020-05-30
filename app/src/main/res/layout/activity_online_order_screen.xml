@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/AppGrayBackground"
-    tools:context=".OnlineOrderScreen">
+    tools:context=".views.OnlineOrderScreen">
 
     <RelativeLayout
         android:id="@+id/CustomeActionBarOnlineOrderScreen"

@@ -1,18 +1,20 @@
-package com.example.k_pos;
+package com.example.k_pos.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-public class HistoryScreen extends AppCompatActivity {
+import com.example.k_pos.R;
+
+public class ManageProductScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history_screen);
+        setContentView(R.layout.activity_manage_product_screen);
 
-        //this is for hide the default action bar from android studio
+        //this is for hide the default actionbar from android studio
         getSupportActionBar().hide();
     }
 

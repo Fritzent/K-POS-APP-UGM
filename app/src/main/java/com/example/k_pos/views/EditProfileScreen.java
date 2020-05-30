@@ -1,9 +1,11 @@
-package com.example.k_pos;
+package com.example.k_pos.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.k_pos.R;
 
 public class EditProfileScreen extends AppCompatActivity {
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/AppBackgroundMainMenu"
-    tools:context=".MainActivity">
+    tools:context=".views.MainActivity">
 
     <LinearLayout
         android:id="@+id/customeActionBar"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@id/viewLineOne">
 
         <TextView
-            android:id="@+id/txtBalance"
+            android:id="@+id/txtSaldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/balance"
