@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
         onlineorderMenu = findViewById(R.id.OnlineOrderMenu);
         userBalance = findViewById(R.id.txtSaldo);
 
-       userBalance.setText(Integer.toString(user.getSaldo()));
+//       userBalance.setText(Integer.toString(user.getSaldo()));
+        userBalance.setText(String.valueOf(user.getSaldo()));
+
 
         //this is for the open store menu click action
         openstoreMenu.setOnClickListener(new View.OnClickListener() {

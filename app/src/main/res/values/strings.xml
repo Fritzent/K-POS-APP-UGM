@@ -94,6 +94,8 @@
     <string name="dummy_Time">14.00 WIB</string>
     <string name="dummy_location_order">Meja 5, Kantin HY UGM</string>
     <string name="text_rp">Rp</string>
+    <string name="textDateOfBirth">Date of Birth</string>
+    <string name="textName">Name</string>
 
 
 </resources>

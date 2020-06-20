@@ -1,6 +1,6 @@
 package com.example.k_pos.Api;
 
-public class UtilsApi {
+public class LoginUtilsApi {
 
     private String email;
     private String password;

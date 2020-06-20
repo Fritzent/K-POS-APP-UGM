@@ -16,6 +16,7 @@
     <color name="UnActiceSection">#B7B7B7</color>
     <color name="AppLightBluefontColor">#35405A</color>
     <color name="AppRedColor">#FF1D1D</color>
+    <color name="AppSwitchThumbOff">#8e8e8e</color>
 
 <!--    this is color for menu-->
     <color name="AppOpenStoreMenu">#DCF0FF</color>

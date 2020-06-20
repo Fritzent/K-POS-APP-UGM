@@ -3,6 +3,7 @@ package com.example.k_pos.storage;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.k_pos.models.Penjual;
 import com.example.k_pos.models.User;
 
 public class SharedPrefManage {
@@ -48,6 +49,20 @@ public class SharedPrefManage {
         editor.apply();
     }
 
+    public void savePenjual(Penjual penjual){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putInt("user_id", penjual.getUser_id());
+        editor.putInt("rekening_id", penjual.getRekening_id());
+        editor.putInt("deleted_at", penjual.getDeleted_at());
+        editor.putString("penjualId", penjual.getPenjualId());
+        editor.putString("toko", penjual.getToko());
+        editor.putString("foto_toko", penjual.getFoto_toko());
+        editor.putString("created_at", penjual.getCreated_at());
+        editor.putString("updated_at", penjual.getUpdated_at());
+    }
+
     //this is to check the user is login
     public boolean isLoggedIn(){
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -74,6 +89,20 @@ public class SharedPrefManage {
                 sharedPreferences.getString("created_at", null),
                 sharedPreferences.getString("updated_at", null),
                 sharedPreferences.getString("token", null)
+        );
+    }
+    public Penjual getPenjual(){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return new Penjual(
+                sharedPreferences.getInt("user_id", -1),
+                sharedPreferences.getInt("rekening_id", -1),
+                sharedPreferences.getInt("deleted_at", -1),
+                sharedPreferences.getString("penjualId", null),
+                sharedPreferences.getString("toko", null),
+                sharedPreferences.getString("foto_toko", null),
+                sharedPreferences.getString("created_at", null),
+                sharedPreferences.getString("updated_at", null)
+
         );
     }
 

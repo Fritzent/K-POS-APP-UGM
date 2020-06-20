@@ -11,13 +11,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.k_pos.R;
+import com.example.k_pos.models.Penjual;
 import com.example.k_pos.models.User;
 import com.example.k_pos.storage.SharedPrefManage;
 
 public class SettingScreen extends AppCompatActivity {
 
     LinearLayout managereceiptMenu, advancedsettingMenu, managediscountMenu, managetaxMenu, exitMenu;
-    TextView txtEditProfile,txtUsername,txtUserPhone,txtExitUser;
+    TextView txtEditProfile,txtUsername,txtUserPhone,txtExitUser,txtUserStoreName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class SettingScreen extends AppCompatActivity {
 
         //this is for the inizalitation the sharedPreference
         User user = SharedPrefManage.getInstance(this).getUser();
+        Penjual penjual = SharedPrefManage.getInstance(this).getPenjual();
 
         //this is for defenation the xml item on java
         managereceiptMenu = findViewById(R.id.receiptSide);
@@ -37,11 +39,13 @@ public class SettingScreen extends AppCompatActivity {
         txtEditProfile = findViewById(R.id.txtEditProfile);
         txtUsername = findViewById(R.id.UserName);
         txtUserPhone = findViewById(R.id.UserPhoneNumber);
+        txtUserStoreName = findViewById(R.id.UserStoreName);
 
         //this is to set the text of textview into database date
         txtUsername.setText(user.getName());
         txtUserPhone.setText(user.getNo_telepon());
         txtExitUser.setText(" Exit "+ user.getName());
+        txtUserStoreName.setText("StoreName"+ penjual.getToko());
 
         //this is for the text edit profile click action
         txtEditProfile.setOnClickListener(new View.OnClickListener() {

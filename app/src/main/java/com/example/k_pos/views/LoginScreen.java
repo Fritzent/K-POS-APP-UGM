@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +14,7 @@ import android.widget.Toast;
 import com.example.k_pos.R;
 import com.example.k_pos.Api.ApiClient;
 import com.example.k_pos.models.LoginRespon;
-import com.example.k_pos.models.ResponBody;
-import com.example.k_pos.Api.UtilsApi;
+import com.example.k_pos.Api.LoginUtilsApi;
 import com.example.k_pos.storage.SharedPrefManage;
 
 import java.util.Objects;
@@ -100,7 +98,7 @@ public class LoginScreen extends AppCompatActivity {
 
     //this is for the login method action
     public void loginProceed(){
-        UtilsApi loginRequest = new UtilsApi();
+        LoginUtilsApi loginRequest = new LoginUtilsApi();
         loginRequest.setEmail(inputEmail.getText().toString());
         loginRequest.setPassword(inputPassword.getText().toString());
 
@@ -116,6 +114,9 @@ public class LoginScreen extends AppCompatActivity {
 
                         SharedPrefManage.getInstance(LoginScreen.this)
                                 .saveUser(loginRespondata.getUser());
+                        SharedPrefManage.getInstance(LoginScreen.this)
+                                .savePenjual(loginRespondata.getUser().getPenjual());
+
 
                         Intent intent = new Intent(LoginScreen.this, MainActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

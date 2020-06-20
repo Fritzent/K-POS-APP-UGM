@@ -3,6 +3,8 @@ package com.example.k_pos.models;
 public class User {
     private int id, saldo, fcm_token, lokasi_id, created_by, updated_by;
     private String level, name, email, email_verified_at, no_telepon, tanggal_lahir, foto, status, created_at, updated_at, token;
+    private Penjual penjual;
+
 
     public User(int id, int saldo, int fcm_token, int lokasi_id, int created_by, int updated_by, String level, String name, String email, String email_verified_at, String no_telepon, String tanggal_lahir, String foto, String status, String created_at, String updated_at, String token) {
         this.id = id;
@@ -22,6 +24,7 @@ public class User {
         this.created_at = created_at;
         this.updated_at = updated_at;
         this.token = token;
+
     }
 
     public int getId() {
@@ -90,5 +93,13 @@ public class User {
 
     public String getToken() {
         return token;
+    }
+
+    public Penjual getPenjual() {
+        return penjual;
+    }
+
+    public void setPenjual(Penjual penjual) {
+        this.penjual = penjual;
     }
 }
